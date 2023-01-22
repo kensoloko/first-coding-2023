@@ -13,8 +13,12 @@ const BEST_WISHES = [
     `Wishing you nothing but health, wealth, and endless blessings in the New Year ahead.`,
     `I wish you a very good luck for what you have planned in life. May your all the plans work out.
         Best of luck for every coming test of life.`,
-    `I wish you a very good luck for all you life. May you get all your desires and may you get success on every single step.
-        I wish you the best of luck.`,
+    `May the new year bring you warmth, love, and light to guide your path to a positive destination`,
+    `On this New Year, may you change your direction and not dates, change your commitments and not the calendar, change your attitude and not the actions, and bring about a change in your faith, your force, and your focus and not the fruit. May you live up to the promises you have made and may you create for you and your loved ones the happiest New Year ever.`,
+    `Wishing you 12 months of success, 52 weeks of laughter, 365 days of fun, 8,760 hours of joy, 525,600 minutes of good luck, and 31,536,000 seconds of happiness.`,
+
+    `Wishing you a Happy New Year with the hope that you will have many blessings in the year to come.`,
+    `Out with the old, in with the new: may you be happy the whole year through. Happy New Year!`,
     `May the closeness of your loved ones, family, and friends fill your heart with joy. Happy New Year!`,
     `Forget your problems, sadness and worries and wake up fresh with happiness and new hopes. I wish that you get all the hopes completed and may you have no problem in your life.
         I wish you best of luck for the future.`,
