@@ -2,21 +2,18 @@
     font-family: 'Abruptly' 
     src: url('./../fonts/AbruptlyRegular-1G430.ttf')
 
-@font-face
-    font-family: 'Angeles' 
-    src: url('./../fonts/AngelesPersonalUseItalic-2Odz8.ttf')
-    
 html
     font-family: 'Abruptly', sans-serif
     font-size: 10px
-    font-weight: 400
 
 body
-    background: url('./../images/bg.png') no-repeat center center
-    background-size: cover
     position: relative
     width: 100%
     height: 100vh
+
+    .background__page
+        position: fixed
+        inset: 0 0 0 0
 
     .content
         position: relative
@@ -28,13 +25,26 @@ body
 
         .content__wish
             position: absolute
-            font-size: 2.5rem
-            letter-spacing: 0.5rem
-            padding: 5rem 10rem
-            line-height: 1.7
             height: max-content
-            margin-top: 10%
+            text-align: center
 
+            @media (max-width: 480px)
+                font-size: 2rem
+                letter-spacing: 0.5rem
+                padding: 3rem 2.5rem
+                line-height: 2
+
+            @media (min-width: 481px) and (max-width: 1200px)
+                font-size: 2.5rem
+                letter-spacing: 0.5rem
+                padding: 5rem 10rem
+                line-height: 2.4
+
+            @media (min-width: 1201px)
+                font-size: 3rem
+                letter-spacing: 0.5rem
+                padding: 10rem 15rem
+                line-height: 3
 .snow 
     position: absolute
     top: -10%
@@ -42,68 +52,13 @@ body
     background-color: white
     box-shadow: 0 0 0 #fff, 0 0 5rem #fff
 
-
-.snow-white 
-    box-shadow: 0 0 0 #fff, 0 0 5rem #fff
-
-    
-.white
-    text-shadow: 0 0 2.5rem white, 0 0 5rem white, 0 0 10rem white
-
-.green 
-    text-shadow: 0 0 0.5rem #1fd224, 0 0 2.5rem #1fd224, 0 0 5rem #1fd224, 0 0 10rem #1fd224, 0 0 20rem #1fd224
-
-
-.snow-green 
-    box-shadow: 0 0 2rem #1fd224, 0 0 5rem #1fd224
-
-
-.orange 
-    text-shadow: 0 0 0.5rem #ffaa01, 0 0 2.5rem #ffaa01, 0 0 5rem #ffaa01, 0 0 10rem #ffaa01, 0 0 20rem #ffaa01
-
-
-.snow-orange 
-    box-shadow: 0 0 20px #ffaa01, 0 0 5rem #ffaa01
-
-
-.pink 
-    text-shadow: 0 0 0.5rem #ff00aa, 0 0 20.5rem #ff00aa, 0 0 5rem #ff00aa,0 0 10rem #ff00aa, 0 0 20rem #ff00aa
-
-
-.snow-pink 
-    box-shadow: 0 0 20px #ff00aa, 0 0 5rem #ff00aa
-
-
-.violet 
-    text-shadow: 0 0 0.5rem #aa00ff,0 0 20.5rem #aa00ff,0 0 5rem #aa00ff,0 0 10rem #aa00ff,0 0 20rem #aa00ff
-
-
-.snow-violet 
-     box-shadow: 0 0 20px #aa00ff, 0 0 5rem #aa00ff
-
-
-.blue 
-    text-shadow: 0 0 0.5rem #00aaff, 0 0 20.5rem #00aaff, 0 0 5rem #00aaff, 0 0 10rem #00aaff, 0 0 20rem #00aaff
-
-
-.snow-blue 
-    box-shadow: 0 0 20px #00aaff, 0 0 5rem #00aaff
-
-
-.red 
-    text-shadow: 0 0 0.5rem #f00, 0 0 20.5rem #f00, 0 0 5rem #f00, 0 0 10rem #f00, 0 0 20rem #f00
-
-
-.snow-red 
-    box-shadow: 0 0 20px #f00, 0 0 5rem #f00
-
-
-.yellow 
-    text-shadow: 0 0 0.5rem #ffea00, 0 0 20.5rem #ffea00, 0 0 5rem #ffea00, 0 0 10rem #ffea00, 0 0 20rem #ffea00
-
-
-.snow-yellow 
-    box-shadow: 0 0 20px #ffea00, 0 0 5rem #ffea00
+.d-flex-center
+    display: flex
+    display: -webkit-flex
+    display: -moz-flex
+    display: -o-flex
+    justify-content: center
+    align-items: center
 
 
 .snowAnimation0 
