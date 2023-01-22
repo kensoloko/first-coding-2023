@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Abruptly";
+  src: url("./../fonts/AbruptlyRegular-1G430.ttf");
+}
+@font-face {
+  font-family: "Angeles";
+  src: url("./../fonts/AngelesPersonalUseItalic-2Odz8.ttf");
+}
+html {
+  font-family: Abruptly, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./../images/bg-body.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+body .content {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+body .content .content__wish {
+  font-size: 8rem;
+  letter-spacing: 0.5rem;
+}
+body .content .content__wish__year {
+  font-family: Poppins sans-serif;
+  font-size: 8rem;
+  letter-spacing: 1rem;
+}
+
+.snow {
+  position: absolute;
+  top: -10%;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 0 #fff, 0 0 5rem #fff;
+}
+
+.snow-white {
+  box-shadow: 0 0 0 #fff, 0 0 5rem #fff;
+}
+
+.white {
+  text-shadow: 0 0 2.5rem white, 0 0 5rem white, 0 0 10rem white;
+}
+
+.green {
+  text-shadow: 0 0 0.5rem #1fd224, 0 0 2.5rem #1fd224, 0 0 5rem #1fd224, 0 0 10rem #1fd224, 0 0 20rem #1fd224;
+}
+
+.snow-green {
+  box-shadow: 0 0 2rem #1fd224, 0 0 5rem #1fd224;
+}
+
+.orange {
+  text-shadow: 0 0 0.5rem #ffaa01, 0 0 2.5rem #ffaa01, 0 0 5rem #ffaa01, 0 0 10rem #ffaa01, 0 0 20rem #ffaa01;
+}
+
+.snow-orange {
+  box-shadow: 0 0 20px #ffaa01, 0 0 5rem #ffaa01;
+}
+
+.pink {
+  text-shadow: 0 0 0.5rem #ff00aa, 0 0 20.5rem #ff00aa, 0 0 5rem #ff00aa, 0 0 10rem #ff00aa, 0 0 20rem #ff00aa;
+}
+
+.snow-pink {
+  box-shadow: 0 0 20px #ff00aa, 0 0 5rem #ff00aa;
+}
+
+.violet {
+  text-shadow: 0 0 0.5rem #aa00ff, 0 0 20.5rem #aa00ff, 0 0 5rem #aa00ff, 0 0 10rem #aa00ff, 0 0 20rem #aa00ff;
+}
+
+.snow-violet {
+  box-shadow: 0 0 20px #aa00ff, 0 0 5rem #aa00ff;
+}
+
+.blue {
+  text-shadow: 0 0 0.5rem #00aaff, 0 0 20.5rem #00aaff, 0 0 5rem #00aaff, 0 0 10rem #00aaff, 0 0 20rem #00aaff;
+}
+
+.snow-blue {
+  box-shadow: 0 0 20px #00aaff, 0 0 5rem #00aaff;
+}
+
+.red {
+  text-shadow: 0 0 0.5rem #f00, 0 0 20.5rem #f00, 0 0 5rem #f00, 0 0 10rem #f00, 0 0 20rem #f00;
+}
+
+.snow-red {
+  box-shadow: 0 0 20px #f00, 0 0 5rem #f00;
+}
+
+.yellow {
+  text-shadow: 0 0 0.5rem #ffea00, 0 0 20.5rem #ffea00, 0 0 5rem #ffea00, 0 0 10rem #ffea00, 0 0 20rem #ffea00;
+}
+
+.snow-yellow {
+  box-shadow: 0 0 20px #ffea00, 0 0 5rem #ffea00;
+}
+
+.snowAnimation0 {
+  animation: snowFall0 linear infinite;
+}
+
+.snowAnimation1 {
+  animation: snowFall1 linear infinite;
+}
+
+.snowAnimation2 {
+  animation: snowFall2 linear infinite;
+}
+
+.snowAnimation3 {
+  animation: snowFall3 linear infinite;
+}
+
+.snowAnimation4 {
+  animation: snowFall4 linear infinite;
+}
+
+@keyframes snowFall0 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    transform: translate(50vw, 150vh);
+  }
+}
+@keyframes snowFall1 {
+  0% {
+    transform: translate(-10vw, -10vh);
+  }
+  100% {
+    transform: translate(60vw, 150vh);
+  }
+}
+@keyframes snowFall2 {
+  0% {
+    transform: translate(10vw, 0vh);
+  }
+  100% {
+    transform: translate(40vw, 150vh);
+  }
+}
+@keyframes snowFall3 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    transform: translate(40vw, 150vh);
+  }
+}
+@keyframes snowFall4 {
+  0% {
+    transform: translate(0vw, 10vh);
+  }
+  100% {
+    transform: translate(30vw, 140vh);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
