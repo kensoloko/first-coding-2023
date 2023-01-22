@@ -1,17 +1,31 @@
-const MAX_SNOW_BALL = 300;
 const textShadowColor = ['white','green','orange','pink','violet','blue','red','yellow'];
-const color = ['#0c0f0a','#1fd224','#ffaa01','#ff00aa','#aa00ff','#00aaff','#f00','#ffea00'];
-const CLASS_NAME_BG = 'backgound__page';
+const CLASS_NAME_BG = 'background__page';
 const CLASS_NAME_WISH_CONTENT = 'content__wish';
 const CLASS_NAME_SNOW = 'snow';
+const BEST_WISHES = [
+    'Life is full of struggles and every day brings new challenges before us. To overcome those situations and achieve our desired success, we need support and appreciation from our close ones. Support can be given in many forms, even though the best wishes and encouraging messages. A message containing inspiring words, heartwarming wishes, and genuine thoughts is enough to boost up a person’s confidence and courage. Check out these simple best wishes and all the best messages below if you are looking for the perfect, heart-touching phrases to wish good luck to someone!'
+];
+
 let lastAddedClass = null;
+changeWish(BEST_WISHES[0]);
+changeColor(randomNumber(textShadowColor.length));
 
-initSnow(MAX_SNOW_BALL);
-changeColor(0);
-setInterval(() => {
-    changeColor(randomNumber(textShadowColor.length))
-}, 5000);
+function randomNumber(limit) {
+    return Math.floor(Math.random() * limit);
+}
 
+function changeColor(number) {
+    const contentWish = document.querySelector(`.${CLASS_NAME_WISH_CONTENT}`);
+    if (lastAddedClass) {
+        contentWish.classList.remove(lastAddedClass);
+    }
+    contentWish.classList.add(textShadowColor[number]);
+}
+
+function changeWish(content) {
+    const contentWish = document.querySelector(`.${CLASS_NAME_WISH_CONTENT}`);
+    contentWish.innerHTML = content;
+}
 
 function initSnow(numberOfSnow) {
     const bg = document.getElementsByClassName(CLASS_NAME_BG)[0];
@@ -23,7 +37,7 @@ function initSnow(numberOfSnow) {
             case i % 5 === 0:
                 snow.classList.add('snowAnimation0');
                 break;
-            
+
             case i % 5 === 1:
                 snow.classList.add('snowAnimation1');
                 break;
@@ -41,7 +55,7 @@ function initSnow(numberOfSnow) {
                 break;
             default:
                 snow.classList.add('snowAnimation5');
-                break; 
+                break;
         }
 
         const left = -50 + randomNumber(150);
@@ -59,23 +73,14 @@ function initSnow(numberOfSnow) {
     }
 }
 
-function randomNumber(limit) {
-    return Math.floor(Math.random() * limit);
-}
-
-function changeColor(number) {
-    const contentWish = document.querySelector(`.${CLASS_NAME_WISH_CONTENT}`);
-    if (lastAddedClass) {
-        contentWish.classList.remove(lastAddedClass);
+function initNightAndShootingStar() {
+    const body = document.body;
+    const night = document.createElement('div');
+    night.className = 'night';
+    const shootingStar = document.createElement('div');
+    shootingStar.className = 'shooting_star';
+    for (let i = 0; i < 20; i++) {
+        night.appendChild(shootingStar);
     }
-    contentWish.classList.add(textShadowColor[number]);
-
-    const snows = document.querySelectorAll(`.${CLASS_NAME_SNOW}`);
-    snows.forEach((e) => {
-        if (lastAddedClass) {
-            e.classList.remove(lastAddedClass);
-        }
-        e.classList.add(`snow-${textShadowColor[number]}`);
-    });
-    lastAddedClass = textShadowColor[number];
+    body.prepend(night);
 }
