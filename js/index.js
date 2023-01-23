@@ -1,7 +1,9 @@
 const textShadowColor = ['white','green','orange','pink','violet','blue','red','yellow'];
 const CLASS_NAME_BG = 'background__page';
+const color = ['#0c0f0a','#1fd224','#ffaa01','#ff00aa','#aa00ff','#00aaff','#f00','#ffea00'];
 const CLASS_NAME_WISH_CONTENT = 'content__wish';
 const CLASS_NAME_SNOW = 'snow';
+
 const BEST_WISHES = [
     `May your life be full of happiness, success, and love. Sending my best wishes to you!`,
     `All the best for all your future endeavors! Hoping that your hard work always brings out the best results for you.`,
@@ -14,7 +16,9 @@ const BEST_WISHES = [
     `I wish you a very good luck for what you have planned in life. May your all the plans work out.
         Best of luck for every coming test of life.`,
     `May the new year bring you warmth, love, and light to guide your path to a positive destination`,
-    `On this New Year, may you change your direction and not dates, change your commitments and not the calendar, change your attitude and not the actions, and bring about a change in your faith, your force, and your focus and not the fruit. May you live up to the promises you have made and may you create for you and your loved ones the happiest New Year ever.`,
+    `On this New Year, may you change your direction and not dates, change your commitments and not the calendar, 
+        change your attitude and not the actions, and bring about a change in your faith, your force, and your focus and not the fruit. 
+        May you live up to the promises you have made and may you create for you and your loved ones the happiest New Year ever.`,
     `Wishing you a Happy New Year with the hope that you will have many blessings in the year to come.`,
     `Out with the old, in with the new: may you be happy the whole year through. Happy New Year!`,
     `May the closeness of your loved ones, family, and friends fill your heart with joy. Happy New Year!`,
@@ -22,17 +26,19 @@ const BEST_WISHES = [
         I wish you best of luck for the future.`,
     `May you always get what you want and may you be at the right place. 
         I wish you a very good luck for the future and may you have a wonderful life with no worries.`,
-    `We're so grateful that you could be here to celebrate the holidays with us and share in our good cheer! May our hopeful wishes follow you home and warm you through the new year.`,
-    `Happy New Year! We know that this past year has been full of challenges, and we pray that the coming year brings brighter days. Sending all our love and good wishes.`,
+    `We're so grateful that you could be here to celebrate the holidays with us and share in our good cheer! 
+        May our hopeful wishes follow you home and warm you through the new year.`,
+    `Happy New Year! We know that this past year has been full of challenges, and we pray that the coming year brings brighter days.
+        Sending all our love and good wishes.`,
     `In an extraordinary year, I’ve been grateful for your extraordinary friendship…. thank you. And cheers to new beginnings!`,
     `Wishing you and yours some well-deserved downtime and a very happy new year to come.`
 ];
 const RANDOM_BG = ['bg.png', 'bg01.jpg', 'bg02.jpg', 'bg03.jpg', 'bg04.jpg', 'bg05.jpg', 'bg06.jpg', 'bg07.jpg', 'bg08.jpg', 'bg09.jpg', 'bg10.jpg'];
 
-let lastAddedClass = null;
 changeBg(RANDOM_BG[randomNumber(RANDOM_BG.length)])
 changeWish(BEST_WISHES[randomNumber(BEST_WISHES.length)]);
 checkContentWishLength();
+changeColor(randomNumber(color.length));
 
 
 function randomNumber(limit) {
@@ -41,9 +47,6 @@ function randomNumber(limit) {
 
 function changeColor(number) {
     const contentWish = document.querySelector(`.${CLASS_NAME_WISH_CONTENT}`);
-    if (lastAddedClass) {
-        contentWish.classList.remove(lastAddedClass);
-    }
     contentWish.classList.add(textShadowColor[number]);
 }
 
@@ -120,8 +123,6 @@ function initNightAndShootingStar() {
 function checkContentWishLength() {
     const contentWish = document.querySelector(`.${CLASS_NAME_WISH_CONTENT}`);
     const content = document.querySelector(`.content`);
-    console.log(contentWish.clientHeight);
-    console.log(content.clientHeight);
     if (contentWish.clientHeight < content.clientHeight) {
         content.classList.add('d-flex-center');
     } else {
