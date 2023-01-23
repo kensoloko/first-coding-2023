@@ -56,7 +56,8 @@ function changeWish(content) {
 
 function changeBg(bgFileName) {
     const body = document.body;
-    const url = `images/${bgFileName}`;
+    const prefix = window.location.href;
+    const url = `${prefix}/images/${bgFileName}`;
     body.style.background = `url(${url}) no-repeat center center`;
     body.style.backgroundSize = 'cover';
 }
